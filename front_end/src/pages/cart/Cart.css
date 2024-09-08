@@ -1,0 +1,120 @@
+.Cart{
+    margin-top: 100px;
+}
+
+.Cart-Title{
+    display: grid;
+    grid-template-columns:1fr 1.5fr 1fr 1fr 1fr .5fr;
+    align-items: center;
+    color: gray;
+    font-size: max(1vw,12px);
+}
+.Cart-Items-Item{
+    margin: 10px 0;
+    color: #000;
+}
+.Cart-Items-Item img{
+    width: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.Cart hr{
+    height: 1px;
+    background: #e2e2e2;
+    border: none;
+}
+.Cart-Items-Item .Cart-Remove{
+    cursor: pointer;
+    color: var(--text-color);
+}
+.Cart-Bottom{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw,20px);
+
+}
+.Cart-Total{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+.Cart-Total-Details{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.Cart-Total hr{
+    height: 1px;
+    background: #e2e2e2;
+    border: none;
+    margin: 10px 0;
+}
+.Cart-Total button{
+    width: max(15vw,200px);
+    padding: 12px 0;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+.Cart-PromoCode{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+.Cart-PromoCode-Input{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+.Cart-PromoCode-Input input{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+}
+.Cart-PromoCode-Input button{
+    width: max(10vw,90px);
+    padding: 12px ;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+.Cart-PromoCode-Input input:hover{
+    border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 777px) {
+    .Cart-Bottom{
+        flex-direction: column-reverse;
+    }
+    .Cart-PromoCode{
+        justify-content: start;
+    }
+}

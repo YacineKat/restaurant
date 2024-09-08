@@ -1,0 +1,40 @@
+.Place-Order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+    margin-bottom: var(--spaces);
+
+}
+.Place-Order-Lift{
+    
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    font-size: 25px;
+
+}
+.Place-Order-Lift input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.Place-Order-Lift .Multi-Fields{
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 777px) {
+    .Place-Order{
+        flex-direction: column;
+    }
+}
