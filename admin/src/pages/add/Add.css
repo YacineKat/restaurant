@@ -1,0 +1,105 @@
+.Add{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.Add form{
+    gap:20px;
+    margin-top: 20px;
+}
+.Add-Img img{
+    width: 120px;
+    cursor: pointer;
+}
+.Add-Product-Name, 
+.Add-Product-Description{
+    width: max(40%,280px);
+}
+.Add-Product-Name input,
+.Add-Product-Description textarea{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #6d6d6d;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #6d6d6d;
+    resize: none;
+}
+.Add-Category-Price{
+    display: flex;
+    gap: 30px ;
+}
+
+.Add-Category-Price select,
+.Add-Category-Price input{
+    max-width: 120px;
+    padding: 10px;
+    border: 1px solid #6d6d6d;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #6d6d6d;
+}
+.Add-Btn{
+    max-width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: tomato;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+.Add-Btn:hover{
+    background: rgb(228, 78, 51);
+}
+
+@media (max-width: 600px) {
+
+    .Add{
+        font-size: 13px;
+    }
+    .Add form{
+        display: grid;
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .Add-Product-Name, 
+    .Add-Product-Description{
+        width: 100%;
+        
+    }
+    .Add-Category-Price{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    input ,textarea{
+        font-weight: 100;
+    }
+    .Add-Img img{
+        display: grid;
+        margin: 0 auto;
+    }
+    .Add-Img {
+        text-align: center;
+    }
+
+
+    .Add-Category-Price{
+        gap: 10px;
+    }
+
+    .Add-Btn{
+        display: grid;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+
+}

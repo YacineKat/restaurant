@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background: #fcfcfc;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+hr{
+  height: 1px;
+  background: #a9a9a9;
+  border: none;
+}
+
+.App-Content{
+  display: flex;
+}
+
+.Flex-Col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

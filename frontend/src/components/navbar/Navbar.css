@@ -1,0 +1,143 @@
+.Navbar{
+    padding: var(--spaces) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Navbar .Logo{
+    width: var(--spaces) * 5;
+}
+.Navbar-Menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+.Navbar-Right{
+    display: flex;
+    align-items: center;
+    gap: var(--spaces);
+}
+.Navbar button{
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px var(--spaces);
+    border-radius: .7vw;
+    cursor: pointer;
+    transition: .5s ;
+}
+.Navbar button:hover{
+    background: var(--primary-color);
+    color: white;
+}
+.Navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--text-color) ;
+}
+.Navbar li{
+    cursor: pointer;
+}
+.Navbar-Search-icon{
+    position: relative;
+}
+.Navbar-Search-icon .Dot{
+    min-width: 10px;
+    min-height: 10px;;
+    background: var(--primary-color);
+    border-radius: 5px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+.Nav-Profile{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.Nav-Profile-Dropdown{
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    list-style: none;
+    background: white;
+    box-shadow: 0 0 10px #00000055;
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+}
+
+.Nav-Profile-Dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 45px;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 6px;
+}
+
+.Nav-Profile-Dropdown li:hover{
+    background: #f0f0f0;
+    color: var(--primary-color);
+}
+.Nav-Profile-Dropdown hr{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #c8c8c8;
+}
+.Nav-Profile-Dropdown p{
+    margin: 0 auto;
+    
+}
+
+
+
+@media (max-width: 1050px) {
+    .Navbar .Logo{
+        width: 140px;
+    }
+    .Navbar-Menu{
+        gap: 15px;
+        font-size: 17px;
+    }
+    .Navbar-Right{
+        gap: var(--spaces);
+    }
+    .Navbar-Right img{
+        width: 22px;
+    } 
+    .Navbar-Right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Navbar .Logo{
+        width: 120px;
+    }
+    .Navbar-Menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .Navbar-Right{
+        gap: 20px;
+    }
+    .Navbar-Right img{
+        width: 20px;
+    } 
+    .Navbar-Right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 777px) {
+    .Navbar-Menu{
+        display: none;
+    }
+}

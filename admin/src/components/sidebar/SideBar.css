@@ -1,0 +1,48 @@
+.SideBar{
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw, 16px);
+}
+.SideBar-Options{
+    padding-top:50px ;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.SideBar-Option{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.SideBar-Option:hover{
+    border-color: tomato;
+}
+
+.SideBar-Option img{
+    width: 25px;
+    height: 25px;
+}
+
+.SideBar-Option.active{
+    background: #f0f0f0;
+    border: 2px solid tomato;
+    border-right: none;
+}
+
+
+@media (max-width: 900px) {
+    .SideBar-Option p{
+        display: none;
+    }    
+}

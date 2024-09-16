@@ -1,0 +1,115 @@
+.List{
+    padding-bottom: 30px;
+}
+.List-Title{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center; 
+} 
+.List-Table-Format{
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 1fr 1fr .5fr;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+    align-items: center;
+    color: #6d6d6d;
+    border-radius: 6px;
+    transition: .3s;
+    animation: fadeIn .3s;
+}
+.List-Table-Format.Title{
+    background-color: #f0f0f0;
+}
+.List-Table-Format img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.Cursor{
+    cursor: pointer;
+}
+.Cursor:hover{
+    color: tomato;
+    font-weight: 800;
+}
+
+.Modal-Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .Modal-Content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .Close-Button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .Close-Button:hover {
+    background-color:#e9563d;
+  }
+  
+  .Calculate-Button {
+    margin-top: 20px;
+    padding:  20px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .Calculate-Button:hover {
+    background-color: #e9563d;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+
+@media (max-width: 600px) {
+   
+    .List-Table-Format{
+        grid-template-columns: 1fr 3fr 1fr ;
+        gap: 15px;
+       
+    }
+    .List-Table-Format.Title{
+        display: none;
+    }
+}
