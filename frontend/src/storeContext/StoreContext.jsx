@@ -12,7 +12,7 @@ const StoreContextProvider = ({ children }) => {
     const [username, setUsername] = useState(localStorage.getItem('username') || '');
     const [cartItem, setCartItem] = useState({});
     const [food_list, setFoodList] = useState(initialFoodList);
-    const url = 'https://restaurant-frontend-x0b2.onrender.com';
+    const url = 'https://restaurant-backend-anmr.onrender.com;
 
     useEffect(() => {
         fetchUserProfile();
