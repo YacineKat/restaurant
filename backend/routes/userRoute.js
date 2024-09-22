@@ -1,4 +1,3 @@
-
 import express from 'express';
 import {
   loginUser,
@@ -14,7 +13,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
 import userModel  from '../models/userModel.js';
-import { log } from 'console';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,7 +21,6 @@ const userRouter = express.Router();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const uploadPath = path.join(__dirname, 'profile-pics');
-    // console.log(Creating directory: ${uploadPath});
     fs.mkdir(uploadPath, { recursive: true }, (err) => {
       if (err) {
         if (err.code !== 'EEXIST') {
@@ -69,7 +66,7 @@ userRouter.get('/profile-pic', authenticateUser, async (req, res) => {
     }
 
     res.set('Content-Type', 'image/png');
-    res.send(user.profilePic); // إرسال الصورة المخزنة كـ Buffer
+    res.send(user.profilePic); // send the profile picture as a response
   } catch (error) {
     console.error('Error retrieving profile picture:', error);
     res.status(500).json({ success: false, message: 'Error retrieving profile picture' });
@@ -87,7 +84,7 @@ userRouter.post('/upload-profile-pic', authenticateUser, upload.single('image'),
       return res.status(400).json({ success: false, message: 'No file uploaded' });
     }
 
-    // حفظ الصورة كـ Buffer في قاعدة البيانات
+    // save the profile picture as a buffer in the database
     user.profilePic = req.file.buffer;
     await user.save();
 

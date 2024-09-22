@@ -1,0 +1,137 @@
+
+.Profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 68vh;
+    @media (max-width: 892px) {
+        height: 110vh;
+    }
+}
+
+.Profile h1{
+    position: absolute;
+    top: 150px;
+    color: var(--primary-color);
+}
+.Profile h2{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+
+}
+.Profile-Pic{
+    position: absolute;
+    top: 280px;
+    right: 400px;
+    display: flex;
+    align-items: start;
+    @media (max-width: 1467px) {
+        left: 800px;
+        margin-right: 50px;
+        
+    }
+    @media (max-width: 1161px) {
+        left: 550px;
+        margin-right: 50px;
+        
+    }
+    @media (max-width: 892px) {
+        left: 190px;
+    }
+}
+.Profile-Form-Pic{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+}
+.Profile-Pic img{
+    width: 330px;
+    height: 330px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .3s;
+    animation: fadeIn .3s;
+
+}
+.Profile form{
+    position: absolute;
+    top: 280px;
+    left: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    @media (max-width: 1161px) {
+        left: 200px;
+        margin-right: 50px;
+        
+    }
+    @media (max-width: 892px) {
+        top: 650px;
+    }
+    
+}
+.Profile-Cont input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.Profile-Form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    width: 300px;
+}
+
+.Profile-Pic-File button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 10px 61px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-weight: 700;
+}
+.Profile-Pic-File input{
+    display: none;
+}
+.Profile-Submit button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: tomato;
+    color: white;
+    font-weight: 700;
+   
+}
+
+@media (max-width: 724px) {
+ .Profile-Pic,
+ .Profile form{
+    position: absolute;
+    right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }   
+}
+@media (max-width:617px) {
+    .Profile-Submit button,
+    .Profile h2,
+    .Profile-Pic-File button{
+        width: 23vh;
+    }
+}

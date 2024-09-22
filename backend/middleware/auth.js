@@ -1,11 +1,16 @@
-
 import jwt from 'jsonwebtoken';
 
 const authenticateUser = async (req, res, next) => {
-  const token = req.header('Authorization').replace('Bearer ', '');
-
-  if (!token) {
+  const authHeader = req.header('Authorization');
+  
+  if (!authHeader) {
     return res.status(401).send({ message: 'No token provided' });
+  }
+
+  const token = authHeader.startsWith('Bearer ') ? authHeader.replace('Bearer ', '') : null;
+  
+  if (!token) {
+    return res.status(401).send({ message: 'Invalid token format' });
   }
 
   try {
@@ -14,8 +19,7 @@ const authenticateUser = async (req, res, next) => {
     next();
   } catch (error) {
     if (error.name === 'TokenExpiredError') {
-      // If the token has expired, generate a new token
-      const userId = error.expiredAt; // Get the user ID from the expired token
+      const userId = error.expiredAt;
       const newToken = jwt.sign({ userId }, process.env.JWT_SECRET, {
         expiresIn: '1h',
       });

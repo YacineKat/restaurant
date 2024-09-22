@@ -1,4 +1,3 @@
-
 import express from 'express';
 import cors from 'cors';
 import { connectDB } from './config/db.js';
@@ -16,9 +15,6 @@ const port = process.env.PORT || 4000;
 // Middlewares
 app.use(express.json());
 app.use(cors());
-
-// إعداد مجلد 'profile-pics' كمجلد ثابت
-app.use('/profile-pics', express.static('profile-pics'));
 
 
 // DB config

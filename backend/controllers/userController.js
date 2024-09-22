@@ -85,7 +85,7 @@ const updateUserProfile = async (req, res) => {
 // Upload profile picture
 const uploadProfilePicHandler = async (req, res) => {
     if (!req.file || !req.file.buffer || !req.file.originalname) {
-        return res.status(400).json({ success: false, message: '1 لم يتم تحميل الملف', error: 'الملف غير موجود' });
+        return res.status(400).json({ success: false, message: 'file dont exist', error: 'file dont exist ' });
     }
 
     const filePath = `${profilePicDir}/${req.file.originalname}`;
